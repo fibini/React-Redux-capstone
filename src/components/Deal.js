@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 import '../index.css';
 
 const Deal = ({
-  title, salePrice, normalPrice, thumb, id,
+  title, salePrice, normalPrice, thumb,
 }) => (
   <div className="deal-container">
     <li className="thumb" style={{ backgroundImage: `url(${thumb})` }}>
       HELLO WORLD
     </li>
-    <Link to={id}><li>{title}</li></Link>
+    <Link to="./game"><li>{title}</li></Link>
     <li>
       $
       {salePrice}
@@ -27,7 +27,7 @@ Deal.propTypes = {
   thumb: PropTypes.string.isRequired,
   salePrice: PropTypes.string.isRequired,
   normalPrice: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
+  // id: PropTypes.string.isRequired,
 };
 
 export default Deal;

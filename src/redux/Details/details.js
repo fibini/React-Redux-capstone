@@ -1,33 +1,27 @@
-// const gameAPI = 'https://www.cheapshark.com/api/1.0/games?id=';
+const gameAPI = 'https://www.cheapshark.com/api/1.0/deals?id=dJNCeHkZV3iaXZQFBSpYh3B2tz6ZuMvBaFpI6d1QYiU%3D';
 
-// const GET_GAME = 'redux/Details/details/GET_GAME';
+const GET_GAME = 'redux/Details/details/GET_GAME';
 
-// function getSales() {
-//   return async (dispatch) => {
-//     const response = await fetch(gameAPI);
-//     const data = await response.json();
-//     const sales = [];
-//     data.forEach((sale) => {
-//       const newSale = {
-//         title: sale.title,
-//         gameID: sale.gameID,
-//         salePrice: sale.salePrice,
-//         thumb: sale.thumb,
-//       };
-//       sales.push(newSale);
-//     });
-//     dispatch({
-//       type: GET_GAME,
-//       payload: sales,
-//     });
-//   };
-// }
+function getGame() {
+  return async (dispatch) => {
+    const response = await fetch(gameAPI);
+    const data = await response.json();
+    const games = [];
+    games.push(data);
+    dispatch({
+      type: GET_GAME,
+      payload: games,
+    });
+  };
+}
 
-// export default function gameReducer(state = [], action = {}) {
-//   switch (action.type) {
-//     case GET_GAME:
-//       return action.payload;
-//     default:
-//       return state;
-//   }
-// }
+export default function gameReducer(state = [], action = {}) {
+  switch (action.type) {
+    case GET_GAME:
+      return action.payload;
+    default:
+      return state;
+  }
+}
+
+export { getGame };
