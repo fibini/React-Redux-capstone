@@ -1,10 +1,11 @@
-const dealsAPI = 'https://www.cheapshark.com/api/1.0/deals?storeID=1&pageSize=14';
+const dealsAPI = 'https://www.cheapshark.com/api/1.0/deals?storeID=';
 
 const GET_DEALS = 'redux/Deals/deals/GET_DEALS';
 
-function getDeals() {
+function getDeals(id) {
   return async (dispatch) => {
-    const response = await fetch(dealsAPI);
+    const response = await fetch(`${dealsAPI}${id}&pageSize=14`);
+    console.log(response);
     const data = await response.json();
     const deals = [];
     data.forEach((deal) => {
@@ -14,6 +15,9 @@ function getDeals() {
         gameID: deal.gameID,
         salePrice: deal.salePrice,
         normalPrice: deal.normalPrice,
+        steamRating: deal.steamRatingText || 'NO RATING AVAILABLE',
+        steamRatingPercent: deal.steamRatingPercent,
+        dealRating: deal.dealRating,
         dealID: deal.dealID,
         thumb: deal.thumb,
       };
