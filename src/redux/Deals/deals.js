@@ -1,4 +1,4 @@
-const dealsAPI = 'https://www.cheapshark.com/api/1.0/deals?storeID=1';
+const dealsAPI = 'https://www.cheapshark.com/api/1.0/deals?storeID=1&pageSize=14';
 
 const GET_DEALS = 'redux/Deals/deals/GET_DEALS';
 

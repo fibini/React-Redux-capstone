@@ -1,0 +1,54 @@
+.thumb {
+    height:max-content;
+    width:100%;
+    height: 50px;
+    background-color: rgb(22, 22, 22);
+  }
+
+  a {
+    text-decoration: none;
+  }
+  
+  li {
+    display: flex;
+    flex-direction: column;
+    background-size: auto;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+  
+  .deals-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .deal-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+  }
+
+  .title {
+    margin-top: 20px;
+    list-style: none;
+    text-decoration: none;
+  }
+
+  .deal-container:nth-child(4n-1) {
+    background-color: #3f62a4;
+  }
+  
+  .deal-container:nth-child(4n-2) {
+    background-color: #3f62a4;
+  }
+
+  .deal-container:nth-child(4n) {
+    background-color: #4167ae;
+  }
+  
+  .deal-container:nth-child(4n-3) {
+    background-color: #4167ae;
+  }
+  
+  

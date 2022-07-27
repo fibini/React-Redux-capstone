@@ -6,9 +6,7 @@ const Games = ({
   title, thumb,
 }) => (
   <div className="deal-container">
-    <li className="thumb" style={{ backgroundImage: `url(${thumb})` }}>
-      HELLO WORLD
-    </li>
+    <li className="thumb"><img src={thumb} alt="game" /></li>
     <li>{title}</li>
   </div>
 );

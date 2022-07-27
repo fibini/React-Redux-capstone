@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { getDeals } from '../../redux/Deals/deals';
 import Deal from '../Deal';
 import '../../index.css';
+import '../CSS/home.css';
 
 const Home = () => {
   const deals = useSelector((state) => state.deals);
@@ -12,7 +13,9 @@ const Home = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getDeals());
+    if (deals.length === 0) {
+      dispatch(getDeals());
+    }
   }, []);
 
   return (
@@ -22,6 +25,7 @@ const Home = () => {
           <Deal
             key={uuidv4()}
             title={deal.title}
+            id={deal.id}
             salePrice={deal.salePrice}
             normalPrice={deal.normalPrice}
             thumb={deal.thumb}

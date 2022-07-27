@@ -1,11 +1,14 @@
-const gameAPI = 'https://www.cheapshark.com/api/1.0/deals?id=dJNCeHkZV3iaXZQFBSpYh3B2tz6ZuMvBaFpI6d1QYiU%3D';
+const gameAPI = 'https://www.cheapshark.com/api/1.0/deals?id=';
 
 const GET_GAME = 'redux/Details/details/GET_GAME';
 
-function getGame() {
+function getGame(id) {
+  const b = id.replace(/[^a-z0-9]/gi, '%');
+  const a = `${gameAPI}${b}`;
   return async (dispatch) => {
-    const response = await fetch(gameAPI);
+    const response = await fetch(a);
     const data = await response.json();
+    // console.log(data);
     const games = [];
     games.push(data);
     dispatch({
