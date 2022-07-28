@@ -15,6 +15,7 @@ An App built using React/Redux that gets a list of game stores and the game deal
 
 ## Live Demo 
 
+[Video Link](https://www.loom.com/share/862f5470ae1e4cef9fdf20911c208867)
 [Live Demo Link](https://warm-tarsier-5ebf9e.netlify.app/)
 
 
