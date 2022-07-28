@@ -6,7 +6,6 @@ function getStores() {
   return async (dispatch) => {
     const response = await fetch(storesAPI);
     const data = await response.json();
-    // console.log(data);
     const stores = [];
     data.forEach((store) => {
       const newStore = {
@@ -16,7 +15,6 @@ function getStores() {
         images: store.images.banner,
       };
       stores.push(newStore);
-      console.log(newStore);
     });
     dispatch({
       type: GET_STORES,

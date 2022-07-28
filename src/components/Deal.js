@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import '../index.css';
+import './CSS/deals.css';
 
 const Deal = ({
   title, salePrice, normalPrice, thumb, id, steamRating, steamRatingPercent, dealRating,

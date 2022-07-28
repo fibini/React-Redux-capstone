@@ -44,39 +44,12 @@ body {
   color: white;
 }
 
-.img-deal {
-  background-color: #5788e5;
-  width: 50%;
-}
-
 .store-img {
   height: 70px;
   background-color: #5788e5;
 }
 
-.deal-page {
-  justify-content: center;
-}
-
 .deals-box {
   display: flex;
   flex-direction: column;
-}
-
-.thumb-deal {
-  align-items: center;
-}
-
-.show-deals{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.deal-page:nth-child(even) {
-  background-color: #3f62a4;
-}
-
-.deal-page:nth-child(odd) {
-  background-color: #4167ae;
 }

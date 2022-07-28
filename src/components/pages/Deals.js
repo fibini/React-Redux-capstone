@@ -9,10 +9,8 @@ import '../CSS/home.css';
 
 const Dealsdetails = () => {
   const deals = useSelector((state) => state.deals);
-  console.log(deals);
 
   const params = useParams();
-  console.log(params);
 
   const dispatch = useDispatch();
 

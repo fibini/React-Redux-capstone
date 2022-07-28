@@ -5,7 +5,6 @@ const GET_DEALS = 'redux/Deals/deals/GET_DEALS';
 function getDeals(id) {
   return async (dispatch) => {
     const response = await fetch(`${dealsAPI}${id}&pageSize=14`);
-    console.log(response);
     const data = await response.json();
     const deals = [];
     data.forEach((deal) => {

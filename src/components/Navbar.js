@@ -6,7 +6,7 @@ import { faGear, faMicrophone, faCaretLeft } from '@fortawesome/free-solid-svg-i
 const Navbar = () => (
   <nav className="nav-container">
     <div>
-      <FontAwesomeIcon icon={faCaretLeft} className="facaretleft-icon bar-items" />
+      <NavLink to="/"><FontAwesomeIcon icon={faCaretLeft} className="facaretleft-icon bar-items" /></NavLink>
     </div>
     <div>
       <NavLink to="/" className="bar-items">STORES</NavLink>
