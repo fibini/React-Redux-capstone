@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+#root {
+  margin-top: 90px;
+}
+
 body {
   background-color: #4369b2;
 }
@@ -14,6 +18,10 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: #3f62a4;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  top: 0;
 }
 
 .Navbar-icon {
