@@ -13,6 +13,10 @@ An App built using React/Redux that gets a list of game stores and the game deal
 - HTML
 - CSS
 
+## Live Demo 
+
+[Live Demo Link](https://warm-tarsier-5ebf9e.netlify.app/)
+
 
 ## Getting Started
 
